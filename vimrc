@@ -18,7 +18,7 @@ filetype plugin on
 
 
 " *** scrooloose/nerdtree
-let g:NERDTreeWinPos = 'right'
+let g:NERDTreeWinPos='right'
 
 
 " *** Shougo/indentLine
@@ -31,7 +31,7 @@ let g:NERDTreeWinPos = 'right'
 " *** vim-airline/vim-airline-themes
 set laststatus=2
 " >themes: dark, luna, molokai, simple, term, bubblegum ...
-let g:airline_theme='bubblegum'
+let g:airline_theme='luna'
 let g:airline#extensions#tabline#enabled=1 " upper line
 let g:airline#extensions#tabline#formatter='unique_tail'
 
