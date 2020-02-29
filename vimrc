@@ -51,12 +51,12 @@ filetype plugin on
 
 "
 " *** kien/ctrlp.vim
-"set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-"let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-"let g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$', 'link': 'some_bad_symbolic_links', }
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$', 'link': 'some_bad_symbolic_links', }
 
-"let g:ctrlp_map = '<C-p>'
-"let g:ctrlp_cmd = 'CtrlPMRUFiles' " CtrlP | CtrlPMRUFiles | CtrlPBuffer
+let g:ctrlp_map = '<C-p>'
+let g:ctrlp_cmd = 'CtrlPMRUFiles' " CtrlP | CtrlPMRUFiles | CtrlPBuffer
 
 " --------------------------
 
@@ -158,8 +158,8 @@ vnoremap <S-TAB> <
 " *** Django Project set
 "noremap <LEADER>dr :bot terminal ++rows=7<CR>sh djangorun.sh<CR><C-w>k
 
-inoremap {{ {{  }}<ESC>2hi
-inoremap {% {%  %}<ESC>2hi
+"inoremap {{ {{  }}<ESC>2hi
+"inoremap {% {%  %}<ESC>2hi
 "inoremap <!-- <!--  --><ESC>3hi
 
 
