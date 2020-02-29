@@ -17,15 +17,15 @@ filetype plugin on
 "let g:tagbar_width = 30
 
 
-" *** scrooloose/nerdtree
-let g:NERDTreeWinPos='right'
-
-
 " *** Shougo/indentLine
 "let g:indentLine_char = '┆'
 "let g:indentLine_setConceal = 0	" disappear on cursor current
 "let g:indentLine_color_term = 239	" Vim
 "let g:indentLine_color_gui = '#C0BEBF'	" GVim
+
+
+" *** scrooloose/nerdtree
+let g:NERDTreeWinPos='right'
 
 
 " *** vim-airline/vim-airline-themes
