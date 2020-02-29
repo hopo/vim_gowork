@@ -18,7 +18,7 @@ filetype plugin on
 
 
 " *** scrooloose/nerdtree
-"let g:NERDTreeWinPos = "left"
+let g:NERDTreeWinPos = 'right'
 
 
 " *** Shougo/indentLine
