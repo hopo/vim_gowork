@@ -4,31 +4,23 @@
 " ==============================
 
 
-"
-" *** Pathogen
+" *** Pathogen Set
 execute pathogen#infect()
 
 
-"
-" *** filetype plugin
+" *** filetype plugin on
 filetype plugin on
 
 
-" 
-" ------ vim plugins -------
-
-"
 " *** majutsushi/tagbar
 "let g:tagbar_left = 1
 "let g:tagbar_width = 30
 
 
-"
 " *** scrooloose/nerdtree
 "let g:NERDTreeWinPos = "left"
 
 
-"
 " *** Shougo/indentLine
 "let g:indentLine_char = '┆'
 "let g:indentLine_setConceal = 0	" disappear on cursor current
@@ -36,17 +28,12 @@ filetype plugin on
 "let g:indentLine_color_gui = '#C0BEBF'	" GVim
 
 
-"
 " *** vim-airline/vim-airline-themes
-"set laststatus=2
-"let g:airline_theme='bubblegum'
-"let g:airline_theme='dark'
-"let g:airline_theme='luna'
-"let g:airline_theme='molokai'
-"let g:airline_theme='simple'
-"let g:airline_theme='term'
-"let g:airline#extensions#tabline#enabled=1 " upper line
-"let g:airline#extensions#tabline#formatter='unique_tail'
+set laststatus=2
+" >themes: dark, luna, molokai, simple, term, bubblegum ...
+let g:airline_theme='bubblegum'
+let g:airline#extensions#tabline#enabled=1 " upper line
+let g:airline#extensions#tabline#formatter='unique_tail'
 
 
 "
@@ -58,17 +45,11 @@ let g:ctrlp_custom_ignore = { 'dir':  '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlPMRUFiles' " CtrlP | CtrlPMRUFiles | CtrlPBuffer
 
-" --------------------------
-
-
-
-" 
+ 
 " *** VIM Set
 if has("syntax")
 	syntax on
 endif
-
-
 set autoindent
 set background=light	" Background color dark or light
 set backspace=indent,eol,start
@@ -85,12 +66,10 @@ set tabstop=4			" Tab 4
 set nowrap
 
 
-"
 " *** Key mapping
 let mapleader = "\<SPACE>"
 
 
-"
 " *** normal mode keymap
 noremap ; :
 
@@ -129,12 +108,11 @@ noremap <C-l> :wincmd l<CR>
 
 " *** Excute App
 noremap <LEADER>et :bot terminal ++rows=16<CR>
-noremap <LEADER>es :!subl %
-noremap <LEADER>eb :!chromium-browser --incognito %
-noremap <LEADER>ep :!python3 %
+"noremap <LEADER>es :!subl %
+"noremap <LEADER>eb :!chromium-browser --incognito %
+"noremap <LEADER>ep :!python3 %
 
 
-"
 " *** insert mode keymap
 inoremap <. <><LEFT>
 inoremap </ </><LEFT>
@@ -142,29 +120,17 @@ inoremap (<CR> (<CR>)<ESC>O<TAB>
 inoremap {<CR> {<CR>}<ESC>O<TAB>
 
 
-"
 " *** terminal mode keymap
 tnoremap <C-j> <C-w>j
 tnoremap <C-k> <C-w>k
 
 
-"
 " *** visual mode keymap
 vnoremap <TAB> >
 vnoremap <S-TAB> <
 
 
-"
-" *** Django Project set
-"noremap <LEADER>dr :bot terminal ++rows=7<CR>sh djangorun.sh<CR><C-w>k
-
-"inoremap {{ {{  }}<ESC>2hi
-"inoremap {% {%  %}<ESC>2hi
-"inoremap <!-- <!--  --><ESC>3hi
-
-
-"
-" *** set (modify) color
+" *** colorsheme set
 "colorscheme fromthehell
 "colorscheme horizon
 "colorscheme monokai
