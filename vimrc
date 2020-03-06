@@ -31,10 +31,10 @@ let g:NERDTreeWinPos='left'
 " *** vim-airline/vim-airline-themes
 set laststatus=2
 " >themes: dark, luna, molokai, simple, term, bubblegum ...
-let g:airline_theme='luna'
-let g:airline#extensions#tabline#enabled=1 " upper line
+let g:airline_theme='dark'
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled=1 "upper line
 let g:airline#extensions#tabline#formatter='unique_tail'
-
 
 "
 " *** kien/ctrlp.vim
