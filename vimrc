@@ -25,7 +25,7 @@ filetype plugin on
 
 
 " *** scrooloose/nerdtree
-let g:NERDTreeWinPos='right'
+let g:NERDTreeWinPos='left'
 
 
 " *** vim-airline/vim-airline-themes
@@ -107,7 +107,7 @@ noremap <C-l> :wincmd l<CR>
 
 
 " *** Excute App
-noremap <LEADER>et :bot terminal ++rows=16<CR>
+noremap <LEADER>et :bot terminal ++rows=10<CR>
 "noremap <LEADER>es :!subl %
 "noremap <LEADER>eb :!chromium-browser --incognito %
 "noremap <LEADER>ep :!python3 %
@@ -136,3 +136,10 @@ vnoremap <S-TAB> <
 "colorscheme monokai
 "colorscheme potato
 
+
+" ***YCM set
+"let g:ycm_max_num_candidates=50
+let g:ycm_auto_trigger=0
+let g:ycm_enable_diagnostic_signs=0
+let g:ycm_echo_current_diagnostic=0
+let g:ycm_autoclose_preview_window_after_completion=1

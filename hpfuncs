@@ -1,0 +1,29 @@
+# ======================================
+# hp funcs
+# ======================================
+
+
+# *** command
+function cmat() { cmatrix -b; }
+function nfet() { clear && neofetch; }
+function ip3() { ipython3; }
+function v() { vim $1; }
+function ra() { ranger; }
+
+
+# *** git command
+function gstatus() { git status; }
+function gdiff() { git diff $1; }
+function glog() { git log --oneline --graph; }
+
+
+# *** transmission command
+function tmra() { transmission-remote -a $1; }
+function tmrl() { transmission-remote -l; }
+function tmr-cli() { transmission-remote-cli; }
+
+
+# &&& tmux command
+function tsh() { tmux split-window -h $1 $2; }
+function tsv() { tmux split-window $1 $2; }
+function tnw() { tmux new-window $1 $2; }
