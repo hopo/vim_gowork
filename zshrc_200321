@@ -1,0 +1,119 @@
+
+#
+# =============================
+#  *** Mac OS ****************
+#  *** USER:HPMBA ************
+#  *** $HOME/.zshrc ***
+# =============================
+
+
+#
+# *** PS1
+#PS1='\h:\W $ '
+
+#
+# *** VIUSUAL
+export VISUAL='vim'
+
+
+#
+# *** PYTHONPATH
+#export PYTHONPATH=$HOME/.python
+
+
+#
+# *** golang env
+export GOROOT=/usr/local/Cellar/go/1.13.8/libexec
+export GOPATH=/Users/hp/golang
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+
+#
+# *** java env
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home
+#export JAVA_HOME=$(/usr/libexec/java_home)
+
+
+#
+# *** bash-git-prompt set
+#GIT_PROMPT_ONLY_IN_REPO=1
+#source $HOME/.bash-git-prompt/gitprompt.sh
+
+
+#
+# *** zsh-git-prompt set
+#source $HOME/.zsh-git-prompt/zshrc.sh
+#PROMPT='%B%m %~%b$(git_super_status) %# '
+
+
+#
+# *** aliases
+alias ls='ls -G'
+alias l='ls -F'
+alias la='ls -a'
+alias ll='ls -lh'
+
+alias cp='cp -i'
+alias rm='rm -i'
+
+alias cdv='cd ~/.vim'
+#alias cdb='cd ~/devWorkspace/bamnat/'
+#alias cdf='cd ~/devWorkspace/factorial/'
+#alias wob='workon bamnat'
+#alias wof='workon factorial'
+
+#alias hpgitaddcommit='git add ~/Workspace && git commit -am'
+#alias hprmclasses='find ~/workspace -name "*.class" -exec rm {} \;'
+
+
+
+# ***Set Spaceship ZSH as a prompt (installed from npm)
+autoload -U promptinit; promptinit
+prompt spaceship
+
+SPACESHIP_PROMPT_SEPARATE_LINE=true
+SPACESHIP_TIME_SHOW=true
+SPACESHIP_TIME_FORMAT=%T
+SPACESHIP_DIR_TRUNC=1
+SPACESHIP_EXEC_TIME_SHOW=false
+SPACESHIP_GOLANG_SHOW=false
+SPACESHIP_DIR_PREFIX='-'
+SPACESHIP_GIT_PREFIX='-'
+
+
+#
+# *** search history (C-r)
+function exists { which $1 &> /dev/null }
+
+if exists percol; then
+    function percol_select_history() {
+        local tac
+        exists gtac && tac="gtac" || { exists tac && tac="tac" || { tac="tail -r" } }
+        BUFFER=$(fc -l -n 1 | eval $tac | percol --query "$LBUFFER")
+        CURSOR=$#BUFFER         # move cursor
+        zle -R -c               # refresh
+    }
+
+    zle -N percol_select_history
+    bindkey '^R' percol_select_history
+fi
+
+
+# ***
+# ***Start zsh
+#neofetch -L
+source $HOME/.hpfuncs
+
+
+# ***
+# *** chromium
+export GOOGLE_API_KEY="no"
+export GOOGLE_DEFAULT_CLIENT_ID="no"
+export GOOGLE_DEFAULT_CLIENT_SECRET="no"
+
+
+# ***
+# *** python3 virtualenvwrapper
+VIRTUALENVWRAPPER_PYTHON=$(which python3)
+source /usr/local/bin/virtualenvwrapper.sh
+
